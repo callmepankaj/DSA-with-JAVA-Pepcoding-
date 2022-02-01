@@ -3,25 +3,26 @@ import java.util.Scanner;
 
 public class Prime {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
+        Scanner scn = new Scanner(System.in);
+        int t = scn.nextInt();
 
         for (int i = 0; i < t; i++) {
-            int n = sc.nextInt();
-            int count = 0;
+            int n = scn.nextInt();
 
-            for (int div = 2; div*div <= n; i++) {
-                if (n % 2 == 0) {
-                    count++;
+            int div = 2;
+            while (div * div <= n) {
+                if (n % div == 0) {
                     break;
                 }
+                div++;
             }
 
-            if (count == 0) {
+            if (div * div > n) {
                 System.out.println("prime");
             } else {
                 System.out.println("not prime");
             }
         }
+
     }
 }
