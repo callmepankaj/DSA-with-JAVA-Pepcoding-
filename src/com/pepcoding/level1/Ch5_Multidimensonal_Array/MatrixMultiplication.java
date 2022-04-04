@@ -28,6 +28,7 @@ public class MatrixMultiplication {
             System.out.print("Invalid input");              //3
             return;
         }
+
         int[][] ans = new int[n1][m2];
         for (int i = 0; i < n1; i++) {
             for (int j = 0; j < m2; j++) {                  //4
